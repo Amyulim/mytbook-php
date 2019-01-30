@@ -21,20 +21,20 @@ $query = "INSERT INTO users (user_email, student_id, user_pass) VALUES ('$user_e
 
 
 
-//if($result){
-//  $id = $conn->lastInsertId();
-//  echo json_encode(array(
-//    "status"=>true,
-//    "id"=>$id
-//  ));
-//} else {
-//  echo json_encode(false);
-//}
-//$result = $conn->query($query);
-//if($result){
-//  echo json_encode(true);
-//} else {
-//  echo json_encode(false);
-//}
+if($result){
+  $id = $conn->lastInsertId();
+  echo json_encode(array(
+    "status"=>true,
+    "id"=>$id
+  ));
+} else {
+  echo json_encode(false);
+}
+$result = $conn->query($query);
+if($result){
+  echo json_encode(true);
+} else {
+  echo json_encode(false);
+}
 
 ?>
