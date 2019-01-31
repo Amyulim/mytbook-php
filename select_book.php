@@ -19,7 +19,7 @@ $result = $conn->query($query);
 if($result){
   $books = $result->fetchAll();
   if(!empty($books)){
-    echo json_encode(array($books));
+    echo json_encode($books);
   } else {
     echo json_encode(false);
   }
