@@ -20,18 +20,17 @@ $query = "SELECT * FROM books";
 $result = $conn->query($query);
 
 echo "book_title";
-//if($result){
-//  $users = $result->fetchAll();
-////  if(!empty($users)){
-////    echo json_encode(array(
-////      "status"=>true,
-////      "id"=>$users[0]["id"]
-////    ));
-////  } else {
-////    echo json_encode(false);
-////  }
-//} else {
-//  echo json_encode(false);
-//} 
+if($result){
+  $users = $result->fetchAll();
+  if(!empty($users)){
+    echo json_encode(array(
+      $books
+    ));
+  } else {
+    echo json_encode(false);
+  }
+} else {
+  echo json_encode(false);
+} 
 
 ?>
