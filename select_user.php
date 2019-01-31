@@ -15,8 +15,8 @@ $user_email = $_POST['user_email'];
 //$student_id = $_POST['student_id'];
 $user_pass  = $_POST['user_pass'];
 
-//$query = "SELECT id FROM users WHERE user_email='$user_email' AND user_pass='$user_pass'";
-$query = "SELECT * FROM users";
+$query = "SELECT id FROM users WHERE user_email='$user_email' AND user_pass='$user_pass'";
+//$query = "SELECT * FROM users";
 
 $result = $conn->query($query);
 
@@ -25,9 +25,9 @@ if($result){
   if(!empty($users)){
      echo json_encode(array($users
  
-//    echo json_encode(array(
-//      "status"=>true,
-//      "id"=>$users[0]["id"]
+    echo json_encode(array(
+      "status"=>true,
+      "id"=>$users[0]["id"]
     ));
   } else {
     echo json_encode(false);
