@@ -19,19 +19,19 @@ $query = "SELECT * FROM users";
 
 $result = $conn->query($query);
 
-echo "good";
-if($result){
-  $users = $result->fetchAll();
-//  if(!empty($users)){
-//    echo json_encode(array(
-//      "status"=>true,
-//      "id"=>$users[0]["id"]
-//    ));
-//  } else {
-//    echo json_encode(false);
-//  }
-} else {
-  echo json_encode(false);
-} 
+echo "user_email";
+//if($result){
+//  $users = $result->fetchAll();
+////  if(!empty($users)){
+////    echo json_encode(array(
+////      "status"=>true,
+////      "id"=>$users[0]["id"]
+////    ));
+////  } else {
+////    echo json_encode(false);
+////  }
+//} else {
+//  echo json_encode(false);
+//} 
 
 ?>
