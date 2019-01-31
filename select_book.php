@@ -21,11 +21,9 @@ $result = $conn->query($query);
 
 echo "book_title";
 if($result){
-  $users = $result->fetchAll();
-  if(!empty($users)){
-    echo json_encode(array(
-      $books
-    ));
+  $books = $result->fetchAll();
+  if(!empty($books)){
+    echo json_encode(array($books));
   } else {
     echo json_encode(false);
   }
