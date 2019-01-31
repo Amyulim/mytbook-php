@@ -23,11 +23,11 @@ $result = $conn->query($query);
 if($result){
   $users = $result->fetchAll();
   if(!empty($users)){
-     echo json_encode(array($users
+//     echo json_encode(array($users
  
     echo json_encode(array(
       "status"=>true,
-      "id"=>$users["id"]
+      "id"=>$users[0]["id"]
     ));
   } else {
     echo json_encode(false);
