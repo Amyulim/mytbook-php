@@ -27,7 +27,7 @@ if($result){
  
     echo json_encode(array(
       "status"=>true,
-      "id"=>$users[0]["id"]
+      "id"=>$users["id"]
     ));
   } else {
     echo json_encode(false);
