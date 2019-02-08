@@ -19,7 +19,6 @@ $user_pass = $_POST['user_pass'];
 $query = "INSERT INTO users (user_email, student_id, user_pass) VALUES ('$user_email','$student_id','$user_pass')";
 
 
-
 $result = $conn->query($query);
 if($result){
   $id = $conn->lastInsertId();
