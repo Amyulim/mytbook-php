@@ -11,21 +11,10 @@ catch (PDOExpection $e) {
     echo "Error" . $e->getMessage();
 }
 
-$user_id = $_POST['user_id'];
-$book_id = $_POST['book_id'];
-$book_title = $_POST['book_title'];
-$book_isbn = $_POST['book_isbn'];
-$book_course = $_POST['book_course'];
-$book_price = $_POST['book_price'];
-$book_condition = $_POST['book_condition'];
-$book_desc = $_POST['book_desc'];
-$book_img = $_POST['book_img'];
-$book_mdate = $_POST['book_mdate'];
-
 
 
 $query = "SELECT books SET book_title='{$_POST["book_title"]}', book_isbn='{$_POST["book_title"]}', book_course='{$_POST["book_course"]}', book_price='{$_POST["book_price"]}', book_condition='{$_POST["book_condition"]}', book_desc='{$_POST["book_desc"]}', book_img='{$_POST["book_desc"]}',
-book_img='{$_POST["book_img"]}', book_mdate='{$_POST["book_mdate"]}' WHERE user_id={$_POST["user_id"]} AND book_id={$_POST["book_id"]}");
+book_img='{$_POST["book_img"]}', book_mdate='{$_POST["book_mdate"]}' WHERE user_id='{$_POST["user_id"]}' AND book_id='{$_POST["book_id"]}'");
 
 
 
