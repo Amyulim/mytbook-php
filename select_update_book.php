@@ -11,22 +11,22 @@ catch (PDOExpection $e) {
     echo "Error" . $e->getMessage();
 }
 
-
+echo ($conn);
 
 $query = "SELECT * FROM books WHERE user_id='{$_POST["user_id"]}' AND book_id='{$_POST["book_id"]}'");
 
 
 
-if($result){
-  $books = $result->fetchAll();
-  if(!empty($books)){
-    echo json_encode($books);
-  } else {
-    echo json_encode(false);
-  }
-} else {
-  echo json_encode(false);
-} 
+//if($result){
+//  $books = $result->fetchAll();
+//  if(!empty($books)){
+//    echo json_encode($books);
+//  } else {
+//    echo json_encode(false);
+//  }
+//} else {
+//  echo json_encode(false);
+//} 
 
 
 ?>
