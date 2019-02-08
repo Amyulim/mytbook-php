@@ -13,18 +13,20 @@ catch (PDOExpection $e) {
 
 
 
-$query = "SELECT books * FROM WHERE user_id='{$_POST["user_id"]}' AND book_id='{$_POST["book_id"]}'");
+$query = "SELECT * FROM books WHERE user_id='{$_POST["user_id"]}' AND book_id='{$_POST["book_id"]}'");
 
 
-
-echo $query;
-
-$result = $conn->query($query);
 
 if($result){
-  echo json_encode(true);
+  $books = $result->fetchAll();
+  if(!empty($books)){
+    echo json_encode($books);
+  } else {
+    echo json_encode(false);
+  }
 } else {
   echo json_encode(false);
-}
+} 
+
 
 ?>
