@@ -5,7 +5,7 @@ header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With, Content-Type");
 
   try {
-    $conn = new PDO("mysql:host=localhost;dbname=mytbook","root", "root");
+    $conn = ew PDO("mysql:host=k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=hxx7ktin4x3q7iue", "caqwo1iz5lww951z", "zqigtmtt81za05j2");
     echo "Connected &nbsp; ";
   }catch (PDOExpection $e){
     echo "Error" .$e->getMessage();
