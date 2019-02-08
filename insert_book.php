@@ -1,17 +1,16 @@
 <?php
-
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
 header("Access-Control-Allow-Headers: X-Requested-With, Content-Type");
 
+
   try {
-    $conn = ew PDO("mysql:host=k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=hxx7ktin4x3q7iue", "caqwo1iz5lww951z", "zqigtmtt81za05j2");
-    echo "Connected &nbsp; ";
+   $conn = new PDO("mysql:host=k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=hxx7ktin4x3q7iue","caqwo1iz5lww951z", "zqigtmtt81za05j2");
   }catch (PDOExpection $e){
     echo "Error" .$e->getMessage();
   }
 
-var_dump($_POST);
+//var_dump($_POST);
 
 $user_id = $_POST['user_id'];
 $book_title = $_POST['book_title'];
@@ -27,7 +26,6 @@ $book_mdate = $_POST['book_mdate'];
 $query = "INSERT INTO books (user_id, book_title, book_isbn, book_course, book_price, book_condition, book_desc, book_img, book_mdate) VALUES ('$user_id','$book_title','$book_isbn','$book_course','$book_price','$book_condition','$book_desc','$book_img','$book_mdate')";
 
 
-echo $query;
 
 $result = $conn->query($query);
 
