@@ -32,7 +32,7 @@ echo $query;
 $result = $conn->query($query);
 
 if($result){
-  echo json_encode(true);
+  echo json_encode($books);
 } else {
   echo json_encode(false);
 }
