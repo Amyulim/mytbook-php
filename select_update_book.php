@@ -12,7 +12,7 @@ catch (PDOExpection $e) {
 }
 
 //$query = "SELECT * FROM books";
-$query = "SELECT * FROM books WHERE user_id='{$_POST["user_id"]}'";
+$query = "SELECT * FROM books WHERE user_id='1'";
 
 $result = $conn->query($query);
 
