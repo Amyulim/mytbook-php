@@ -10,6 +10,7 @@ try {
 catch (PDOExpection $e) {
     echo "Error" . $e->getMessage();
 }
+
 $user_id = $_POST['user_id'];
 
 $query = "SELECT * FROM books WHERE user_id ='$user_id'";
