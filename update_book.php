@@ -38,7 +38,7 @@ if($result){
   if(!empty($books)){
     echo json_encode($books);
   } else {
-    echo json_encode(false);
+    echo json_encode(true);
   }
 } else {
   echo json_encode(false);
