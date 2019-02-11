@@ -31,6 +31,8 @@ $query = "UPDATE books SET book_title='{$_POST["book_title"]}' , book_isbn='{$_P
 
 //echo $query;
 
+$result = $conn->query($query);
+
 if($result){
   $books = $result->fetchAll();
   if(!empty($books)){
