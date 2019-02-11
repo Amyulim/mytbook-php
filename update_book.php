@@ -5,7 +5,6 @@ header("Access-Control-Allow-Headers: X-Requested-With, Content-Type");
 
 try {
     $conn = new PDO("mysql:host=k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=hxx7ktin4x3q7iue", "caqwo1iz5lww951z", "zqigtmtt81za05j2");
-		
    
 }
 catch (PDOExpection $e) {
@@ -33,8 +32,6 @@ $query = "UPDATE books SET book_title='{$_POST["book_title"]}' , book_isbn='{$_P
 echo $query;
 
 $result = $conn->query($query);
-
-echo $result;
 
 if($result){
   echo json_encode(true);
