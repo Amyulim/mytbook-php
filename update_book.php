@@ -34,7 +34,7 @@ $query = "UPDATE books SET book_title='{$_POST["book_title"]}' , book_isbn='{$_P
 $result = $conn->query($query);
 
 if($result){
-  echo json_encode(true);
+  echo json_encode($books);
 } else {
   echo json_encode(false);
 }
