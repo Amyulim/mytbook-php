@@ -31,12 +31,15 @@ $query = "UPDATE books SET book_title='{$_POST["book_title"]}' , book_isbn='{$_P
 
 //echo $query;
 
-$result = $conn->query($query);
-
 if($result){
-  echo json_encode($books);
+  $books = $result->fetchAll();
+  if(!empty($books)){
+    echo json_encode($books);
+  } else {
+    echo json_encode(false);
+  }
 } else {
   echo json_encode(false);
-}
+} 
 
 ?>
