@@ -15,7 +15,7 @@ $user_id = $_POST['user_id'];
 $book_id = $_POST['book_id'];
 
 
-$query = "DELETE FROM books WHERE book_id='{$_POST["book_id"]}' " ;
+$query = "DELETE FROM books WHERE book_id={$_POST["book_id"]} " ;
 
 //echo $query;
 
