@@ -31,6 +31,9 @@ $result = $conn->query($query);
 
 if($result){
   echo json_encode($books);
+  $books = $result -> fetchAll();
+  $last_id = $conn-> lastInsertId();
+  error_log($last_id);
 } else {
   echo json_encode(false);
 }
