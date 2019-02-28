@@ -31,15 +31,17 @@ $result = $conn->query($query);
 
 if($result){
   $books = $result->fetchAll();
-  
-  echo json_encode($books);
-  
-  $last_id = $conn->lastInsertId();
+  if(!empty($books)){
+    echo json_encode($books);
+    $last_id = $conn->lastInsertId();
   echo " Last posted book ID is ".$last_id;
   error_log($last_id);
+  }else{
+     echo json_encode(false);
+  }
   
 } else {
-  echo json_encode(false);
+ 
 }
 
 ?>
