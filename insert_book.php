@@ -30,9 +30,11 @@ $query = "INSERT INTO books (user_id, book_title, book_isbn, book_course, book_p
 $result = $conn->query($query);
 
 if($result){
-  echo json_encode($books);
   $books = $result->fetchAll();
-  $last_id = $conn->lastInsertId();
+  
+  echo json_encode($books);
+  
+  $last_id = $conn-> lastInsertId();
   error_log($last_id);
 } else {
   echo json_encode(false);
