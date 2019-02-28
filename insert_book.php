@@ -28,17 +28,13 @@ $query = "INSERT INTO books (user_id, book_title, book_isbn, book_course, book_p
 
 
 $result = $conn->query($query);
-
 if($result){
-     $id = $conn->lastInsertId();
+  $id = $conn->lastInsertId();
   echo json_encode(array(
     "status"=>true,
-    "book_id"=>$id
-   
-  }
-  
+    "id"=>$id
+  ));
 } else {
- json_encode(false);
+  echo json_encode(false);
 }
-
 ?>
