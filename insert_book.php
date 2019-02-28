@@ -34,8 +34,9 @@ if($result){
   
   echo json_encode($books);
   
-  $last_id = $conn-> lastInsertId();
+  $last_id = $conn->lastInsertId();
   error_log($last_id);
+  
 } else {
   echo json_encode(false);
 }
