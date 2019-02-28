@@ -30,18 +30,15 @@ $query = "INSERT INTO books (user_id, book_title, book_isbn, book_course, book_p
 $result = $conn->query($query);
 
 if($result){
-  $books = $result->fetchAll();
-  if(!empty($books)){
-    echo json_encode($books);
-    $last_id = $conn->lastInsertId();
-  echo " Last posted book ID is ".$last_id;
-  error_log($last_id);
-  }else{
-     echo json_encode(false);
+     $id = $conn->lastInsertId();
+  echo json_encode(array(
+    "status"=>true,
+    "book_id"=>$id
+   
   }
   
 } else {
- 
+ json_encode(false);
 }
 
 ?>
