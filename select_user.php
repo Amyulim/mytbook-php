@@ -25,7 +25,7 @@ if($result){
   if(!empty($users)){
 //     echo json_encode(array($users
  
-    echo json_encode(array
+    echo json_encode(array(
       "status"=>true,
       "id"=>$users[0]["id"],
       "email" =>$user_email,
