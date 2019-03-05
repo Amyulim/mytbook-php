@@ -1,3 +1,3 @@
 <?php
-echo "hi";
+include("index.html");
 ?>
