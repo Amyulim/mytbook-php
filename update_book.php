@@ -28,11 +28,10 @@ $query = "UPDATE books SET book_title='{$_POST["book_title"]}' , book_isbn='{$_P
 //echo $query;
 
 $result = $conn->query($query);
-if($result){
-  $id = $conn->lastInsertId();
+if($result){;
   echo json_encode(array(
     "status"=>true,
-    "id"=>$id
+    "id"=>true
   ));
 } else {
   echo json_encode(false);
