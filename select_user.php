@@ -12,7 +12,6 @@ catch (PDOExpection $e) {
 }
 
 $user_email = $_POST['user_email'];
-//$student_id = $_POST['student_id'];
 $user_pass  = $_POST['user_pass'];
 
 $query = "SELECT * FROM users WHERE user_email='$user_email' AND user_pass='$user_pass'";
